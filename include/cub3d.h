@@ -6,7 +6,7 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:32:39 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/02 14:18:21 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:24:20 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,7 @@ typedef struct  s_game
 
 int error_msg(char *msg);
 int	exit_cub(char *msg, t_game *cub);
+int	close_cub(t_game *cub);
 int validation_file(int argc, char **argv);
 int check_file(char *file);
 

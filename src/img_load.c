@@ -6,13 +6,13 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 14:14:08 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/02 14:18:13 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:26:18 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/cub3d.h"
 
-int it_is_xmp(char *img)
+int it_is_xpm(char *img)
 {
 	if (ft_strncmp(img + ft_strlen(img) - 4, ".xpm", 4) != 0)
 		return (0);

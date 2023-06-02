@@ -1,6 +1,6 @@
 NAME	= cub3D
 
-SRCS	= cub3d.c errors.c src/validation.c
+SRCS	= cub3d.c errors.c src/validation.c src/init.c src/img_load.c src/matrix.c
 
 OBJS	= $(SRCS:.c=.o)
 

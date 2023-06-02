@@ -6,7 +6,7 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 00:10:30 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/02 14:11:16 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:25:45 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	my_mlx_destroy(t_img *img, t_game *cub)
 		mlx_destroy_image(cub->mlx, img->i);
 }
 
-int	close_game(t_game *cub)
+int	close_cub(t_game *cub)
 {
 	my_mlx_destroy(cub->texture.north, cub);
 	my_mlx_destroy(cub->texture.south, cub);
@@ -44,5 +44,5 @@ int	exit_cub(char *msg, t_game *cub)
 {
 	if (msg)
 		error_msg(msg);
-	return (close_game(cub));
+	return (close_cub(cub));
 }
