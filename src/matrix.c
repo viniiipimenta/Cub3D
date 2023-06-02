@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.c                                            :+:      :+:    :+:   */
+/*   matrix.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/01 17:32:24 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/02 12:45:50 by mpimenta         ###   ########.fr       */
+/*   Created: 2023/06/02 13:17:24 by mpimenta          #+#    #+#             */
+/*   Updated: 2023/06/02 13:17:53 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/cub3d.h"
+#include "../include/cub3d.h"
 
-int main(int argc, char **argv)
+void	matrix_free(char **matrix)
 {
-    t_game cub;
-    
-    if (!validation_file(argc, argv))
-        return (0);
-    init(&cub);
-    return (0);
+	int	i;
+
+	i = 0;
+	while (matrix && matrix[i])
+	{
+		free(matrix[i]);
+		i++;
+	}
+	if (matrix)
+		free(matrix);
 }

@@ -6,17 +6,17 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 00:06:08 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/02 01:08:09 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/02 12:59:39 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/cub3d.h"
 
-int	check_file(char *map)
+int	check_file(char *file)
 {
 	int	fd;
 
-	fd = open(map, O_RDONLY);
+	fd = open(file, O_RDONLY);
 	close(fd);
 	return (fd > 0);
 }
