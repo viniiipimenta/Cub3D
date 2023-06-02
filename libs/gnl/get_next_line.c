@@ -6,7 +6,7 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 17:56:50 by mpimenta          #+#    #+#             */
-/*   Updated: 2022/07/06 10:31:39 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/02 00:31:22 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static char	*ft_cleaning_read_line(char *line)
 		free(line);
 		return (NULL);
 	}
-	line_ret = (char *)malloc(sizeof(char) * (ft_strlen(line) - i + 1));
+	line_ret = (char *)malloc(sizeof(char) * (gnl_ft_strlen(line) - i + 1));
 	if (!line_ret)
 		return (NULL);
 	while (line[i] != '\0')
@@ -52,7 +52,7 @@ static char	*ft_getting_line(char *line)
 	ret = malloc(sizeof(char) * (len + 2));
 	if (!ret)
 		return (NULL);
-	ft_strlcpy(ret, line, len + 1);
+	gnl_ft_strlcpy(ret, line, len + 1);
 	if (line[len] == '\n')
 		ret[len] = '\n';
 	ret[len + 1] = '\0';
@@ -68,7 +68,7 @@ static char	*ft_reading_line(int fd, char *line)
 	if (!buffer)
 		return (NULL);
 	doing = 1;
-	while (doing != 0 && !ft_strchr(line, '\n'))
+	while (doing != 0 && !gnl_ft_strchr(line, '\n'))
 	{
 		doing = read(fd, buffer, BUFFER_SIZE);
 		if (doing == -1)
@@ -82,7 +82,7 @@ static char	*ft_reading_line(int fd, char *line)
 			line = malloc(sizeof(char));
 			line[0] = '\0';
 		}
-		line = ft_strjoin(line, buffer);
+		line = gnl_ft_strjoin(line, buffer);
 	}
 	free(buffer);
 	return (line);

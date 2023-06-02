@@ -6,13 +6,13 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 18:18:22 by mpimenta          #+#    #+#             */
-/*   Updated: 2022/07/06 10:06:54 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/02 00:44:15 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char	*s)
+size_t	gnl_ft_strlen(const char	*s)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char	*s)
 	return (i);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*gnl_ft_strchr(const char *s, int c)
 {
 	int	i;
 
@@ -38,14 +38,14 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strdup(const char *s)
+char	*gnl_ft_strdup(const char *s)
 {
 	char	*s1;
 	size_t	len_s;
 	int		i;
 
 	i = 0;
-	len_s = ft_strlen(s);
+	len_s = gnl_ft_strlen(s);
 	s1 = malloc(sizeof(char) * (len_s + 1));
 	if (!s1)
 		return (0);
@@ -58,14 +58,14 @@ char	*ft_strdup(const char *s)
 	return (s1);
 }
 
-char	*ft_strjoin(char	*s1, char const	*s2)
+char	*gnl_ft_strjoin(char	*s1, char const	*s2)
 {
 	size_t	i;
 	size_t	j;
 	char	*str;
 
 	if (!s1)
-	s1 = ft_strdup("");
+	s1 = gnl_ft_strdup("");
 	if (!s1 || !s2)
 		return (NULL);
 	i = 0;
@@ -78,7 +78,7 @@ char	*ft_strjoin(char	*s1, char const	*s2)
 	if (!str)
 		return (NULL);
 	j = 0;
-	ft_strlcpy(str, s1, i + 1);
+	gnl_ft_strlcpy(str, s1, i + 1);
 	while (s2[j])
 		str[i++] = s2[j++];
 	str[i] = '\0';
@@ -86,7 +86,7 @@ char	*ft_strjoin(char	*s1, char const	*s2)
 	return (str);
 }
 
-size_t	ft_strlcpy(char	*dest, const char	*src, size_t	size)
+size_t	gnl_ft_strlcpy(char	*dest, const char	*src, size_t	size)
 {
 	size_t	i;
 	size_t	len;
