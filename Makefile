@@ -1,6 +1,6 @@
 NAME	= cub3D
 
-SRCS	= 
+SRCS	= cub3d.c errors.c src/validation.c
 
 OBJS	= $(SRCS:.c=.o)
 

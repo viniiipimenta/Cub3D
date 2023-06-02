@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.c                                            :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/01 17:32:24 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/02 00:08:17 by mpimenta         ###   ########.fr       */
+/*   Created: 2023/06/02 00:10:30 by mpimenta          #+#    #+#             */
+/*   Updated: 2023/06/02 00:24:35 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/cub3d.h"
 
-int main(int argc, char **argv)
+int error_msg(char *msg)
 {
-    if (!validation_file(argc, argv))
-        return (0);
-    return (0);
+	printf("Error\n%s\n", msg);
+	return (0);
 }
