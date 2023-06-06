@@ -1,6 +1,9 @@
 NAME	= cub3D
 
-SRCS	= cub3d.c errors.c src/validation.c src/init.c src/img_load.c src/matrix.c
+SRCS	= cub3d.c errors.c \
+		src/validation.c src/init.c src/img_load.c src/matrix.c src/color.c src/map_analyze.c \
+		src/texture_utils.c src/texture_utils_2.c src/utils_map.c src/utils.c src/validation.c \
+		src/utils_2.c src/normalize_map.c\
 
 OBJS	= $(SRCS:.c=.o)
 
