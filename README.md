@@ -7,4 +7,4 @@
 
 ---
 
-## DONE BY @viniiipimenta and @leeticiamm
+## DONE BY [@viniiipimenta](https://github.com/viniiipimenta) and [@leeticiamm](https://github.com/leeticiamm)
