@@ -6,7 +6,7 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:32:24 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/05 11:13:19 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/15 15:53:48 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ int main(int argc, char **argv)
         return (0);
     init(&cub);
     map_analyze(argv[1], &cub);
+    map_validation(&cub);
     return (0);
 }

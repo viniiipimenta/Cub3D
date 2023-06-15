@@ -6,7 +6,7 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:32:39 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/06 13:38:18 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/15 16:04:33 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,10 @@ int	exit_cub(char *msg, t_game *cub);
 int	close_cub(t_game *cub);
 int validation_file(int argc, char **argv);
 int check_file(char *file);
+void    map_validation(t_game *cub);
+int	is_valid_cell(char map_cell);
+int	is_player_cell(char map_cell);
+void	check_for_open_wall(char **map, int px, int py, t_game *cub);
 
 //start mlx
 
@@ -127,6 +131,7 @@ t_img	*img_load(char *img, t_game *cub);
 void	matrix_free(char **matrix);
 int	matrix_len(char **matrix);
 char	**matrix_push(char **matrix, char *new);
+char	**dup_matrix(char **matrix);
 
 //analyze map
 
