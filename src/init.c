@@ -6,7 +6,7 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 12:15:15 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/02 14:19:09 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/15 23:27:57 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	init_texture(t_game *cub)
 	cub->texture.black = NULL;
 	cub->texture.floor = -1;
 	cub->texture.ceiling = -1;
-	cub->texture.black = img_load("img/black.xpm", cub);
+	cub->texture.black = img_load("texture/black.xpm", cub);
 	if (!cub->texture.black || !cub->texture.black->i)
 		exit_cub("Try to run from the root of the project", cub);
 }

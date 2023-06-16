@@ -6,7 +6,7 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 00:06:08 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/02 12:59:39 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/15 23:08:10 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,12 @@ int	check_file(char *file)
 
 int check_extention(char *map)
 {
-	if (ft_strncmp(map + ft_strlen(map) - 4, ".cub", 4) != 0)
+	int	len;
+
+	len = ft_strlen(map);
+	if (ft_strncmp(map + len - 4, ".cub", 4) != 0)
 		return (0);
-	return (1);    
+	return (1);
 }
 
 int validation_file(int argc, char **argv)

@@ -6,7 +6,7 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:32:39 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/15 16:04:33 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/15 22:51:43 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,6 +149,10 @@ int	is_west(char *key);
 int	is_south(char *key);
 int	is_north(char *key);
 
+//handle
+
+int	handle_key_up(int key, t_game *cub);
+int	handle_key_down(int key, t_game *cub);
 
 //utils
 
