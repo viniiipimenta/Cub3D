@@ -6,11 +6,20 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:32:24 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/15 22:54:43 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/18 18:13:16 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/cub3d.h"
+
+int	game_loop(t_game *cub)
+{
+	if (cub->frame.count++ % cub->frame.rate != 0)
+		return (0);
+	handle_player_move(cub);
+	render_scene(cub);
+	return (1);
+}
 
 void	initialize_window(t_game *cub)
 {
@@ -40,7 +49,7 @@ void	start_mlx(t_game *cub)
 	mlx_hook(cub->win, 2, 1L << 0, handle_key_down, cub);
 	mlx_hook(cub->win, 3, 1L << 1, handle_key_up, cub);
 	mlx_hook(cub->win, 17, 0, close_cub, cub);
-	//mlx_loop_hook(cub->mlx, game_loop, cub);
+	mlx_loop_hook(cub->mlx, game_loop, cub);
 	mlx_loop(cub->mlx);
 }
 

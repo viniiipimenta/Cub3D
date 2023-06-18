@@ -6,7 +6,7 @@
 /*   By: mpimenta <mpimenta@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:32:39 by mpimenta          #+#    #+#             */
-/*   Updated: 2023/06/15 22:51:43 by mpimenta         ###   ########.fr       */
+/*   Updated: 2023/06/18 18:22:28 by mpimenta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 
 # define WIDTH 640
 # define HEIGHT 480
+# define M_PI 3.14159265358979323846
 
 typedef struct s_img
 {
@@ -153,6 +154,9 @@ int	is_north(char *key);
 
 int	handle_key_up(int key, t_game *cub);
 int	handle_key_down(int key, t_game *cub);
+void	handle_player_move(t_game *cub);
+int is_wall(int x, int y, t_game *cub);
+float	degree_to_radians(float degree);
 
 //utils
 
@@ -166,5 +170,13 @@ int	min(int a, int b);
 
 int	get_color_from_string(char *string, t_game *cub);
 void	handle_texture_line(char *line, t_game *cub);
+
+//render 
+
+void	render_scene(t_game *cub);
+void	set_pixel_color(int x, int y, int color, t_game *cub);
+int	has_ray_reached_limit(t_game *cub);
+void	handle_texture(int ray_count, int wall_height, t_game *cub);
+unsigned int	get_texture_pixel_color(int x, int y, t_img *img);
 
 #endif
