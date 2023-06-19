@@ -3,7 +3,17 @@
 
 ---
 
-## STILL WORKING ON THIS PROJECT
+## Install
+
+```sh
+git clone https://github.com/viniiipimenta/Cub3D.git cub3d
+```
+
+## Usage
+
+1. Run `cd cub3d` and `make` to compile program
+
+2. Run the program: `./cub3d maps/<map>.cub`
 
 ---
 
